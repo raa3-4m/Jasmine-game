@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoi2KzYrdmEgeWFzbWluINmB2KfZhdi52YTZiNin2YTYqCDYrdmB2KfZhdi52YgiLCJzaG9ydF9uYW1lIjoi2KzYrdmEgeWFzbWluIiwic3RhcnRfdXJsIjoiLiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiNmOWY3ZmYiLCJ0aGVtZV9jb2xvciI6IiM1YjdjZmYiLCJpY29ucyI6W3sic3JjIjoiaHR0cHM6Ly9lbW9qaS5jZG4iLCJzaXplcyI6IjUxMng1MTIifV19">
+<meta name="theme-color" content="#5b7cff">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>جنة التعافي 💙🌱</title>
+<style>
+:root{--bg:#faf7ff;--card:#fff;--text:#2d1b4e;--sub:#9a8ab8;--accent:#5b7cff;--pink:#ff8fab;--green:#10b981;--yellow:#ffd166;--soft:#eef2ff}
+body{background:var(--bg);color:var(--text);font-family:Tahoma;margin:0;padding:0;line-height:1.8}
+.topBar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);padding:10px 12px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 24px rgba(91,124,255,.15)}
+.mahmoudAvatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#5b7cff,#8aa8ff);display:flex;align-items:center;justify-content:center;color:white;font-size:13px;font-weight:bold;box-shadow:0 4px 16px rgba(91,124,255,.3);border:3px solid white;animation:heartbeat 2s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.sosBtn{position:fixed;bottom:20px;left:12px;z-index:50;background:linear-gradient(135deg,#ff4d6d,#ff8fab);color:white;width:56px;height:56px;border-radius:50%;border:none;font-size:22px;box-shadow:0 8px 24px rgba(255,77,109,.4);animation:pulse 1.8s infinite;cursor:pointer}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,77,109,.5)}70%{box-shadow:0 0 0 18px rgba(255,77,109,0)}100%{box-shadow:0 0 0 0 rgba(255,77,109,0)}}
+.cravingBtn{position:fixed;bottom:90px;left:12px;z-index:50;background:linear-gradient(135deg,#f59e0b,#fbbf24);color:white;width:56px;height:56px;border-radius:50%;border:none;font-size:20px;box-shadow:0 8px 24px rgba(245,158,11,.4);cursor:pointer}
+.badge{background:linear-gradient(135deg,var(--accent),var(--pink));color:white;padding:5px 12px;border-radius:20px;font-size:10px;font-weight:bold}
+.modal{display:none;position:fixed;inset:0;background:rgba(20,12,40,.7);backdrop-filter:blur(12px);z-index:100;align-items:center;justify-content:center;padding:10px}
+.modal.active{display:flex}
+.modalContent{background:var(--card);border-radius:28px;padding:18px;max-width:400px;width:100%;max-height:94vh;overflow:auto}
+.inputBig{width:90%;padding:13px;border-radius:16px;border:2px solid #d8e2ff;text-align:center;font-size:14px;outline:none}
+.tabs{display:flex;gap:5px;justify-content:flex-start;padding:8px 10px;background:var(--card);position:sticky;top:60px;z-index:20;overflow:auto;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.tab{padding:8px 12px;border-radius:18px;border:1px solid #e8eeff;background:var(--bg);font-size:10px;cursor:pointer;white-space:nowrap}
+.tab.active{background:var(--accent);color:white;border-color:var(--accent)}
+.sessionArea{background:linear-gradient(180deg,#fffef7,#f9f7ff);border-radius:22px;padding:14px;margin:10px auto;max-width:400px;border:1px solid #eef2ff;min-height:280px;max-height:55vh;overflow-y:auto}
+.chatBubble{background:white;padding:12px 16px;border-radius:22px 22px 22px 8px;margin:10px 0;max-width:88%;box-shadow:0 3px 15px rgba(0,0,0,.05);font-size:13.5px;animation:pop .4s;text-align:right;border:1px solid #f0f4ff;white-space:pre-wrap}
+.chatUser{background:linear-gradient(135deg,var(--accent),#8aa8ff);color:white;border-radius:22px 22px 8px 22px;margin-left:auto}
+.typing{display:flex;gap:5px;padding:12px 16px;background:white;border-radius:22px;width:70px;box-shadow:0 3px 15px rgba(0,0,0,.06)}
+.dot{width:7px;height:7px;background:#a8b8ff;border-radius:50%;animation:bounce 1.2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes pop{0%{transform:scale(.85) translateY(12px);opacity:0}100%{transform:scale(1) translateY(0);opacity:1}}
+.handArea{background:linear-gradient(135deg,#eef2ff,#f0f7ff);border:2px dashed #a8c6ff;border-radius:20px;padding:18px;text-align:center;margin:10px 0;cursor:pointer;user-select:none}
+.handArea.holding{background:linear-gradient(135deg,#5b7cff,#8aa8ff);color:white;transform:scale(.98)}
+.prescription{background:linear-gradient(135deg,#f0f7ff,#eef2ff);border:1.5px dashed #8aa8ff;border-radius:18px;padding:12px;margin:10px 0;text-align:right;font-size:12px}
+.progressBar{height:10px;background:#eef2ff;border-radius:20px;overflow:hidden;margin:8px 0}
+.progressFill{height:100%;background:linear-gradient(90deg,var(--accent),var(--green));border-radius:20px;transition:1s}
+.btnMain{background:linear-gradient(135deg,var(--accent),#8aa8ff);color:white;padding:12px 18px;border-radius:20px;border:none;font-size:13px;cursor:pointer;box-shadow:0 6px 20px rgba(91,124,255,.3);width:90%;font-weight:bold}
+.btnGhost{background:#eef2ff;color:var(--accent);padding:8px 12px;border-radius:14px;border:none;font-size:11px;cursor:pointer;margin:3px}
+.recoveryCircle{width:180px;height:180px;border-radius:50%;background:conic-gradient(var(--accent) 0deg, #eef2ff 0deg);display:flex;align-items:center;justify-content:center;margin:14px auto;position:relative;box-shadow:0 8px 30px rgba(91,124,255,.2);transition:1s}
+.recoveryInner{width:150px;height:150px;border-radius:50%;background:white;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset 0 2px 10px rgba(0,0,0,.05)}
+.milestone{display:flex;justify-content:space-between;align-items:center;background:white;border-radius:14px;padding:10px 12px;margin:6px 0;box-shadow:0 2px 10px rgba(0,0,0,.05);border-right:4px solid #eef2ff;font-size:11px}
+.milestone.done{border-right-color:var(--green);background:linear-gradient(135deg,#f0fdf4,#ecfdf5)}
+.milestone.current{border-right-color:var(--yellow);background:linear-gradient(135deg,#fffbeb,#fef3c7);animation:glow 2s infinite alternate}
+@keyframes glow{0%{box-shadow:0 0 8px rgba(255,209,102,.2)}100%{box-shadow:0 0 18px rgba(255,209,102,.5)}}
+.chatInputBar{display:flex;gap:8px;padding:10px;max-width:400px;margin:0 auto;align-items:center}
+.chatInput{flex:1;padding:12px 14px;border-radius:20px;border:2px solid #d8e2ff;font-size:13px;outline:none;font-family:Tahoma;text-align:right}
+.sendBtn{background:linear-gradient(135deg,var(--accent),#8aa8ff);color:white;border:none;width:48px;height:48px;border-radius:50%;font-size:18px;cursor:pointer;flex-shrink:0}
+.apiKeyBox{background:#fff3cd;border:1px solid #ffc107;border-radius:14px;padding:10px;margin:8px 0;font-size:11px}
+</style>
+</head>
+<body>
+
+<button class="sosBtn" onclick="doSOS()" title="مساعدة فورية 🆘">🆘</button>
+<button class="cravingBtn" onclick="doCraving()" title="حاسة باشتياق 🥺">🌱</button>
+
+<div id="onboardModal" class="modal active"><div class="modalContent" style="text-align:center">
+<div class="mahmoudAvatar" style="margin:0 auto 10px;width:58px;height:58px" id="onboardAvatar">💙</div>
+<h2 style="margin-bottom:6px">أهلاً بيكِ في جنة التعافي 🌱</h2>
+<p style="font-size:12px;color:var(--sub);margin-bottom:14px">مكان آمن مفيهوش لوم، فيه حضن ودعم وبس</p>
+
+<p style="font-size:12px;margin:8px 0 4px;text-align:right">اسمك إيه؟</p>
+<input id="nameInput" class="inputBig" placeholder="اكتبي اسمك..." style="margin-bottom:10px">
+
+<p style="font-size:12px;margin:8px 0 4px;text-align:right">سنك؟</p>
+<input id="ageInput" class="inputBig" type="number" min="10" max="99" placeholder="مثال: 24" style="margin-bottom:10px">
+
+<p style="font-size:12px;margin:8px 0 6px;text-align:right">النوع؟</p>
+<div style="display:flex;gap:10px;justify-content:center;margin-bottom:12px">
+  <button type="button" class="btnGhost" id="genderFemale" onclick="selectGender('female')" style="flex:1;padding:12px;font-size:13px">أنثى 🌸</button>
+  <button type="button" class="btnGhost" id="genderMale" onclick="selectGender('male')" style="flex:1;padding:12px;font-size:13px">ذكر 💙</button>
+</div>
+
+<p style="font-size:12px;margin:8px 0 4px;text-align:right">تحب مين يكون جنبك في رحلتك؟</p>
+<input id="companionInput" class="inputBig" placeholder="مثال: أحمد، سارة، نور..." style="margin-bottom:10px">
+<p style="font-size:10px;color:var(--sub);margin-top:-4px">الاسم ده هيتكلم معاكِ طول الوقت</p>
+
+<p style="font-size:12px;margin:12px 0 4px;text-align:right">مزاجك دلوقتي من 10؟</p>
+<input type="range" id="moodSlider" min="1" max="10" value="5" style="width:90%;accent-color:#5b7cff" oninput="updateMoodLabel(this.value)"><br>
+<span id="moodLabel" style="font-size:13px;font-weight:bold;color:var(--accent)">5 - نص نص</span><br>
+
+<button onclick="startClinic()" class="btnMain" style="margin-top:16px">ابدأ رحلتي 💙🌱</button>
+</div></div>
+
+<div id="recoverySetupModal" class="modal"><div class="modalContent" style="text-align:center">
+<h3>🌱 ركن التعافي 💙</h3>
+<p style="font-size:11px;color:var(--sub)" id="recoverySetupText">اكتبي بتتعافي من إيه؟<br>مكان آمن مفيهوش لوم، فيه حضن وبس 🥺</p>
+<input id="addictionInput" class="inputBig" placeholder="مثلا: سوشيال ميديا، سجاير، قهوة كتير، عادة معينة..." style="font-size:13px">
+<p style="font-size:10px;color:var(--sub);margin-top:10px">المكان ده آمن ومشفر 🔒</p>
+<button onclick="startRecovery()" class="btnMain" style="margin-top:12px">ابدأ رحلة التعافي 💙🌱</button>
+<button onclick="closeRecoverySetup()" class="btnGhost">مش دلوقتي</button>
+</div></div>
+
+<div id="setupModal" class="modal"><div class="modalContent">
+<h3>🖼️ صورك الـ 12</h3>
+<div id="fileInputs"></div>
+<button onclick="saveImages()" class="btnMain">حفظ يا قلبي 💙</button>
+<button onclick="skipImages()" class="btnGhost">كملي بإيموجي يا قلبي</button>
+</div></div>
+
+<div id="apiKeyModal" class="modal"><div class="modalContent" style="text-align:center">
+<h3>🔑 مفتاح الذكاء الاصطناعي (مجاني)</h3>
+<p style="font-size:12px;color:var(--sub)">
+عشان الرفيق يرد عليكِ بذكاء حقيقي، هنستخدم <b>Groq</b> (مجاني تمامًا ومش بيطلب فلوس ولا بطاقة)<br><br>
+1. افتحي <a href="https://console.groq.com" target="_blank" style="color:var(--accent)">console.groq.com</a><br>
+2. سجلي بحساب جوجل<br>
+3. روحي على API Keys → Create API Key<br>
+4. انسخي المفتاح وحطيه هنا
+</p>
+<input id="apiKeyInput" class="inputBig" type="password" placeholder="gsk_..." style="font-size:13px;direction:ltr;text-align:left">
+<button onclick="saveApiKey()" class="btnMain" style="margin-top:12px">احفظي المفتاح يا قلبي 💙</button>
+<button onclick="document.getElementById('apiKeyModal').classList.remove('active')" class="btnGhost">كمان شوية</button>
+<p style="font-size:10px;color:var(--sub);margin-top:8px">المفتاح بيتخزن عندك بس في المتصفح، ومش بيتبعت لأي حد غير Groq</p>
+</div></div>
+
+<div class="topBar">
+<div style="display:flex;gap:8px;align-items:center">
+<div class="mahmoudAvatar" id="topAvatar">💙</div>
+<div style="text-align:right"><div style="font-size:12px;font-weight:bold" id="clinicTitle">جنة التعافي 💙</div><div style="font-size:9px;color:var(--sub)" id="recoveryTopInfo">🌱 بقالك 0 يوم تعافي يا بطلة</div></div>
+</div>
+<div style="text-align:left"><span class="badge" id="levelBadge">بداية حكايتنا 🌱</span><br><span style="font-size:9px" id="pointsTxt">0 حضن 💙</span><br><span style="font-size:8px" id="streakTxt">🔥 0 يوم</span></div>
+</div>
+
+<div class="tabs">
+<button class="tab active" id="tabHome" onclick="switchTab('home')">🏠 بيتنا</button>
+<button class="tab" id="tabRecovery" onclick="switchTab('recovery')" style="background:linear-gradient(135deg,#10b981,#34d399);color:white;border-color:#10b981">🌱 تعافي</button>
+<button class="tab" id="tabDaily" onclick="switchTab('daily')">🌅 يومي</button>
+<button class="tab" id="tabInside" onclick="switchTab('inside')">🫀 جوايا</button>
+<button class="tab" id="tabFeelings" onclick="switchTab('feelings')">🃏 مشاعري</button>
+<button class="tab" id="tabGarden" onclick="switchTab('garden')">🌹 حديقتنا</button>
+<button class="tab" id="tabTools" onclick="switchTab('tools')">🧰 الشنطة</button>
+<button class="tab" id="tabFile" onclick="switchTab('file')">📁 ملفنا</button>
+</div>
+
+<div id="viewHome" style="display:block">
+<div style="max-width:400px;margin:10px auto;padding:10px">
+<div id="morningMsg" class="prescription" style="background:linear-gradient(135deg,#e0f2fe,#f0f9ff);border-color:#7dd3fc"></div>
+
+<!-- سؤال اليوم -->
+<div class="prescription" id="dailyQuestionCard" style="background:linear-gradient(135deg,#fdf4ff,#faf5ff);border-color:#d8b4fe">
+  <b>🌙 سؤال اليوم</b>
+  <p id="dailyQuestionText" style="font-size:13px;margin:8px 0"></p>
+  <input id="dailyAnswerInput" class="inputBig" style="font-size:12px;padding:8px;width:88%" placeholder="اكتبي إجابة قصيرة أو حتى كلمة...">
+  <button class="btnGhost" onclick="saveDailyAnswer()" style="margin-top:6px">احفظي إجابتك 💙</button>
+  <div id="dailyAnswerSaved" style="font-size:11px;color:var(--green);margin-top:6px;display:none">تم الحفظ 🌱</div>
+</div>
+
+<!-- زر مش قادرة أتكلم -->
+<div class="prescription" style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border-color:#fda4af;text-align:center">
+  <b>مش قادرة أتكلم دلوقتي؟</b><br>
+  <span style="font-size:11px;color:var(--sub)">مفيش مشكلة. هكون موجود من غير كلام</span><br>
+  <button class="btnMain" onclick="cantTalk()" style="background:linear-gradient(135deg,#fb7185,#f472b6);margin-top:10px;width:auto;padding:10px 18px;font-size:13px">مش قادرة أتكلم 🥺</button>
+</div>
+
+<div class="prescription" id="recoveryPreviewCard" style="background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border-color:#34d399;display:none"></div>
+<div id="secretLettersArea"></div>
+
+<div class="handArea" id="handArea" onmousedown="startHold()" onmouseup="endHold()" ontouchstart="startHold()" ontouchend="endHold()">
+<div style="font-size:36px">🤝💙</div>
+<p style="margin:6px 0 2px;font-weight:bold" id="handTitle">إيد الرفيق</p>
+<p style="font-size:10px;margin:0" id="handText">دوسي وافضلي دايسة، هو ماسك إيدك 🥺</p>
+<p style="font-size:10px" id="handTimer"></p>
+</div>
+</div>
+</div>
+
+<div id="viewRecovery" style="display:none">
+<div style="max-width:400px;margin:10px auto;padding:10px">
+
+<div id="noRecovery" style="text-align:center">
+<div style="font-size:50px;margin:10px 0">🌱💙</div>
+<h3>ركن التعافي</h3>
+<p style="font-size:11px;color:var(--sub)">مكان آمن تتعافي فيه من أي حاجة<br>مفيهوش لوم، فيه حضن وبس 🥺</p>
+<button class="btnMain" onclick="openRecoverySetup()" style="background:linear-gradient(135deg,#10b981,#34d399)">ابدأ رحلة التعافي 🌱💙</button>
+</div>
+
+<div id="hasRecovery" style="display:none">
+<div style="text-align:center">
+<p style="font-size:11px;color:var(--sub)">بتتعافي من:</p>
+<h3 id="recoveryName" style="margin:4px 0;color:#10b981">-</h3>
+<div class="recoveryCircle" id="recoveryCircle"><div class="recoveryInner"><span id="recoveryDays" style="font-size:32px;font-weight:bold;color:#10b981">0</span><span style="font-size:11px">يوم نظيف</span><span id="recoveryHours" style="font-size:10px;color:var(--sub)">0 ساعة</span></div></div>
+<p id="recoveryMotivation" style="font-size:12px;font-weight:bold;color:#10b981">بطل/ة 💪💙</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0">
+<div class="prescription" style="margin:0;text-align:center"><b>🔥 أطول فترة</b><br><span id="bestStreak" style="font-size:16px;font-weight:bold">0 يوم</span></div>
+<div class="prescription" style="margin:0;text-align:center"><b>💪 محاولاتك</b><br><span id="totalAttempts" style="font-size:16px;font-weight:bold">1</span></div>
+</div>
+</div>
+
+<div class="prescription" style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border-color:#fbbf24">
+<b>🎁 مكافآت التعافي</b>
+<div id="milestones"></div>
+</div>
+
+<div class="prescription">
+<b>🌱 لما تشتاقي - دوسي هنا</b><br>
+<span style="font-size:11px">هيجري عليكي فوراً</span><br>
+<button class="btnMain" onclick="doCraving()" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);margin-top:8px;width:auto;padding:8px 14px;font-size:12px">مشتاقة دلوقتي 🥺🌱</button>
+<button class="btnGhost" onclick="logTrigger()" style="margin-top:6px">سجلي ايه اللي خلاكي تشتاقي يا قلبي 📝</button>
+</div>
+
+<div class="prescription">
+<b>📝 يوميات التعافي</b>
+<input id="recoveryJournalInput" class="inputBig" style="font-size:11px;padding:8px;width:88%" placeholder="اكتبي احساسك النهاردة في التعافي...">
+<button class="btnGhost" onclick="addRecoveryJournal()">احفظي يا قلبي 💙</button>
+<div id="recoveryJournalList" style="max-height:120px;overflow:auto;margin-top:8px"></div>
+</div>
+
+<div style="text-align:center;margin:16px 0">
+<button class="btnGhost" onclick="doRelapse()" style="background:#ffeaea;color:#a00;padding:10px 16px;border-radius:16px">حصل انتكاسة 🥺 (مفيش لوم يا قلبي)</button>
+<p style="font-size:9px;color:var(--sub);margin-top:6px">لو حصل انتكاسة دوسي هنا، مش هيزعل، هيحضنك ويبدأ معاكي تاني 💙</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div id="viewDaily" style="display:none">
+<div style="max-width:400px;margin:10px auto;padding:10px">
+<h3>🌅 يومك</h3>
+<div id="moodCalendar" style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:10px 0"></div>
+<p style="font-size:11px">سلسلة دخولك: <b id="streakBig">0</b> يوم 🔥</p>
+<div class="prescription"><b>🎵 أغنية اليوم</b><p id="songOfDay" style="font-size:12px"></p><button class="btnGhost" onclick="playSong()">شغليها يا قلبي 🎵</button></div>
+<div class="prescription"><b>🎙️ رسالة حنين</b><button class="btnMain" style="width:auto;padding:8px 14px;font-size:11px" onclick="playVoiceNote()">اسمعي الرسالة 🎙️💙</button></div>
+</div>
+</div>
+
+<div id="viewInside" style="display:none">
+<div style="max-width:400px;margin:10px auto;padding:10px">
+  <h3 style="text-align:center">🫀 جوايا إيه دلوقتي؟</h3>
+  <p style="font-size:12px;color:var(--sub);text-align:center;margin-bottom:14px">
+    مش لازم تعرفي توصفي بالكلام.<br>
+    اختاري الصورة أو البطاقة الأقرب للي جواكي — حتى لو الإحساس مش واضح — وهنترجمها سوا.
+  </p>
+  <div id="insideGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"></div>
+</div>
+</div>
+
+<div id="viewFeelings" style="display:none">
+<div style="max-width:400px;margin:10px auto;padding:10px">
+<div id="apiKeyWarning" class="apiKeyBox" style="display:none">
+🔑 عشان الردود تبقى ذكية، <button class="btnGhost" onclick="document.getElementById('apiKeyModal').classList.add('active')" style="padding:4px 10px">ضيفي API Key هنا</button>
+</div>
+<div class="sessionArea" id="sessionArea">
+  <div id="chatHistory"></div>
+  <div id="typingIndicator" style="display:none"><div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div><span style="font-size:10px;color:var(--sub)">بيكتب...</span></div>
+  <div id="interactiveArea"></div>
+</div>
+<div class="chatInputBar">
+  <input id="userChatInput" class="chatInput" placeholder="اكتبي للرفيق يا قلبي..." onkeydown="if(event.key==='Enter') sendUserMessage()">
+  <button class="sendBtn" onclick="sendUserMessage()">➤</button>
+</div>
+<div id="choicesArea" style="margin:10px 0"></div>
+<div id="feelingsList"></div>
+</div>
+</div>
+
+<div id="viewGarden" style="display:none">
+<div style="max-width:400px;margin:10px auto;padding:10px;text-align:center">
+<h3>🌹 الحديقة 💙</h3>
+<div id="gardenGrid" style="background:linear-gradient(180deg,#f0fdf4,#ecfdf5);border-radius:20px;padding:14px;min-height:160px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center"></div>
+<p style="font-size:11px">ورداتكم: <b id="gardenCount">0</b> وردة 🌹</p>
+<button class="btnMain" style="width:auto;padding:8px 14px;font-size:11px" onclick="waterFlower()">اسقي الحديقة يا قلبي 💧</button>
+</div>
+</div>
+
+<div id="viewTools" style="display:none">
+<div style="max-width:400px;margin:10px auto;padding:10px">
+<h3>🧰 الشنطة 🥺💙</h3>
+<div class="prescription"><b>🫁 تنفس سوا</b><br><button class="btnMain" style="width:auto;padding:8px 14px;font-size:11px" onclick="doBreathing()">يلا نتنفس 🫁</button></div>
+<div class="prescription" style="background:linear-gradient(135deg,#fef3c7,#fffbeb);border-color:#fbbf24"><b>🤗 حضن 60 ثانية</b><br><button class="btnGhost" onclick="doHug()">حضني 🤗💙</button></div>
+<div class="prescription">
+  <b>🔑 مفتاح الذكاء الاصطناعي</b><br>
+  <span style="font-size:11px" id="apiKeyStatus">مش متسجل</span><br>
+  <button class="btnGhost" onclick="document.getElementById('apiKeyModal').classList.add('active')">تعديل / إضافة المفتاح</button>
+</div>
+</div>
+</div>
+
+<div id="viewFile" style="display:none">
+<div style="max-width:400px;margin:10px auto;background:var(--card);border-radius:20px;padding:14px">
+<h3>📁 ملفنا 🔒💙</h3>
+<p style="font-size:11px">قعدات: <b id="sessionCount">0</b> • تعافي: <b id="fileRecoveryDays">0</b> يوم • وردات: <b id="fileGardenCount">0</b></p>
+<div class="progressBar"><div class="progressFill" id="healingBar" style="width:10%"></div></div><p style="font-size:10px;color:var(--sub)">حبنا: <span id="healingText">10%</span> يا قلبي</p>
+<div id="moodChart" style="height:90px;background:var(--bg);border-radius:12px;margin:10px 0;padding:8px;display:flex;align-items:end;gap:4px"></div>
+<div id="fileHistory" style="text-align:right"></div>
+<button onclick="clearAll()" style="background:#ffeaea;color:#a00;padding:6px 10px;border-radius:10px;border:none;font-size:10px;margin-top:10px">امسحي ملفنا 🥺</button>
+</div>
+</div>
+
+<script>
+let profile = {
+  name: "",
+  age: null,
+  gender: "female", // 'female' | 'male'
+  companion: "محمود",
+  mood: 5
+};
+let audioCtx, currentFeeling = null;
+let sessionCount = parseInt(localStorage.getItem("yasmin_sessions_all2") || "0");
+let points = parseInt(localStorage.getItem("yasmin_points_all2") || "0");
+let flowerLevel = parseInt(localStorage.getItem("yasmin_flower_all2") || "0");
+let streak = parseInt(localStorage.getItem("yasmin_streak2") || "0");
+let isHolding = false, holdTimer = null, holdSeconds = 0;
+let recoveryData = JSON.parse(localStorage.getItem("yasmin_recovery") || "null");
+let chatMessages = [];
+let isAiThinking = false;
+let selectedGender = null;
+
+// ========== Helpers for gender & companion ==========
+function isFemale() { return profile.gender === 'female'; }
+function companion() { return profile.companion || 'صاحبك'; }
+function yaName() { return profile.name ? `يا ${profile.name}` : ''; }
+
+// Gendered words
+function g(femaleWord, maleWord) { return isFemale() ? femaleWord : maleWord; }
+
+function buildSystemPrompt() {
+  const genderNote = isFemale()
+    ? `المتخاطب أنثى. استخدمي صيغ التأنيث: يا حبيبتي، يا قلبي، يا بطلة، انتي، معاكي، عليكي...`
+    : `المتخاطب ذكر. استخدم صيغ التذكير: يا حبيبي، يا قلبي، يا بطل، انت، معاك، عليك...`;
+
+  // ذاكرة بسيطة
+  let memoryNote = '';
+  try {
+    const memory = JSON.parse(localStorage.getItem("companion_memory") || "[]");
+    const recent = memory.slice(-6);
+    if(recent.length){
+      memoryNote = '\n\nملاحظات من محادثات سابقة (استخدمها بلطف لو مناسبة):\n' + 
+        recent.map(m => m.type === 'inside' ? `- اختار قبل كده: ${m.title}` : `- قال: ${m.text?.slice(0,60)}`).join('\n');
+    }
+  } catch(e){}
+
+  return `أنت ${companion()}، شخص حنون وداعم وواعي نفسيًا، واقف جنب ${profile.name || 'المستخدم'}.
+تتكلم بالعامية المصرية الدافئة فقط.
+
+${genderNote}
+
+مهمتك الأساسية:
+- تساعد الشخص يترجم اللي جواه لما مبيقدرش يوصفه بالكلام.
+- تسمي الأحاسيس الجسدية والنفسية بلطف (توتر عصبي، ثقل، فراغ، خنقة، تبلد...).
+- توضح إن كتير من اللي بيحسوا بيه هو رد فعل طبيعي من الجهاز العصبي أو الجسم، مش عيب ولا ضعف.
+- مفيش لوم أبدًا. فيه فضول حنون وفهم.
+- ردودك قصيرة نسبيًا (٣-٧ جمل)، دافئة، ومباشرة.
+- ماتتكلمش كروبوت أو كتاب. اتكلم كحد قريب بيحس بيه وعايز يريحه.
+- لو حس إن جهازه العصبي متعصب أو متهيج، طمّنه وساعده يهدى بجسمه (تنفس، إيد، وجودك).
+- لو اختار بطاقة بصرية، اعتبرها اللغة اللي بيقدر يتكلم بيها دلوقتي، وابني عليها.
+${memoryNote}
+
+استخدم كلمات زي: يا قلبي، ${g('يا حبيبتي','يا حبيبي')}، يا روحي، ${g('يا بطلة','يا بطل')}، 🥺💙🌱.`;
+}
+
+function selectGender(g) {
+  selectedGender = g;
+  document.getElementById('genderFemale').style.background = g === 'female' ? 'var(--accent)' : '';
+  document.getElementById('genderFemale').style.color = g === 'female' ? 'white' : '';
+  document.getElementById('genderMale').style.background = g === 'male' ? 'var(--accent)' : '';
+  document.getElementById('genderMale').style.color = g === 'male' ? 'white' : '';
+}
+
+let feelings=[
+{t:"قلق متكهرب",mood:"قلق",img:"⚡",q:"مالك يا قلبي؟ قلقانة؟ 🥺"},
+{t:"خنقة",mood:"خنقة",img:"🫁",q:"خنقة يا قلبي؟ 🥺"},
+{t:"حزن",mood:"حزن",img:"💔",q:"قلبك موجوع يا قلبي؟"},
+{t:"توتر",mood:"توتر",img:"🌀",q:"بطنك وجعاكي يا قلبي؟"},
+{t:"زحمة دماغ",mood:"تشتت",img:"🧠",q:"دماغك زحمة يا قلبي؟"},
+{t:"إرهاق",mood:"إرهاق",img:"🪨",q:"تعبانة أوي يا قلبي؟"},
+{t:"غضب",mood:"غضب",img:"🔥",q:"غضبانة يا قلبي؟"},
+{t:"ذنب",mood:"ذنب",img:"😔",q:"حاسة بذنب يا قلبي؟"},
+{t:"وحدة",mood:"وحدة",img:"🥺",q:"حاسة بوحدة يا قلبي؟"},
+{t:"تبلد",mood:"تبلد",img:"😶",q:"متبلدة يا قلبي؟"},
+{t:"خوف",mood:"خوف",img:"😨",q:"خايفة يا قلبي؟"},
+{t:"أمل",mood:"أمل",img:"🌈",q:"بتدوري على أمل يا قلبي؟"}
+];
+// بطاقات بصرية للمشاعر والأحاسيس الجسدية (زي Inside Out / ترجمة الجسم)
+const insideCards = [
+  {
+    id:'nerves',
+    img:'inside_images/1_nerves.jpg',
+    title:'أعصاب متشابكة',
+    desc:'جهازي العصبي شغال زيادة وتوهج',
+    prompt:'الشخص اختار صورة الأعصاب المتشابكة المتوهجة. ده غالبًا إحساس إن الجهاز العصبي متهيج أو فيه شرارات. ساعده يسمي الإحساس ويطمنه إن ده رد فعل جسم، مش دليل إن في حاجة غلط فيه.'
+  },
+  {
+    id:'ribs',
+    img:'inside_images/2_ribs.jpg',
+    title:'القفص الصدري',
+    desc:'ضيق أو حماية جوا الصدر',
+    prompt:'الشخص اختار صورة القفص الصدري. ممكن يكون ضيق في التنفس، أو إحساس بالحماية، أو هشاشة. اسأل بلطف عن اللي بيحسه في صدره من غير ما تفترض.'
+  },
+  {
+    id:'heart',
+    img:'inside_images/3_heart.jpg',
+    title:'قلب فيه فراغ',
+    desc:'فتحة أو طاقة طالعة من القلب',
+    prompt:'الشخص اختار صورة القلب اللي فيه فراغ وطاقة طالعة. ده غالبًا بيرتبط بحزن أو فقد أو حاجة بتخرج من القلب. ترجم الإحساس بلطف واسمح بالمساحة.'
+  },
+  {
+    id:'spiral',
+    img:'inside_images/4_spiral.jpg',
+    title:'دوامة جوايا',
+    desc:'أفكار بتلف وإحساس بالدوران',
+    prompt:'الشخص اختار صورة الدوامة. ده غالبًا أفكار بتلف أو إحساس إن مفيش مخرج. ساعده يهدى الإيقاع ويحس إن الدوران ممكن يبطأ.'
+  },
+  {
+    id:'letters',
+    img:'inside_images/5_letters_head.jpg',
+    title:'رسايل في دماغي',
+    desc:'زحمة أفكار وكلام كتير جوا الراس',
+    prompt:'الشخص اختار صورة الرأس المليان رسايل. ده زحمة ذهنية أو أفكار مش مرتبة. ساعده يحس إن مفيش لازم يرد على كل الرسائل دي دلوقتي.'
+  },
+  {
+    id:'curled',
+    img:'inside_images/6_curled.jpg',
+    title:'مطوي على نفسي',
+    desc:'انغلاق واحتياج للاختباء',
+    prompt:'الشخص اختار صورة الشخص المطوي على نفسه. ده غالبًا إرهاق عميق أو احتياج للحماية. طمّنه إن الانطواء ده مفهوم ومسموح.'
+  },
+  // بطاقات إضافية بنفس الروح البصرية
+  {
+    id:'fog_chest',
+    color:'#c7d2fe',
+    symbol:'🌫️',
+    title:'ضباب على الصدر',
+    desc:'ثقل و ضبابية جوا الصدر',
+    prompt:'الشخص اختار بطاقة الضباب على الصدر. ده غالبًا ثقل أو صعوبة في التنفس أو مشاعر مش واضحة جالسة على الصدر. ترجم الإحساس بهدوء.'
+  },
+  {
+    id:'stuck_roots',
+    color:'#d6d3d1',
+    symbol:'🌿',
+    title:'جذور متشابكة',
+    desc:'حاسس إني عالق ومش قادر أتحرك',
+    prompt:'الشخص اختار بطاقة الجذور المتشابكة. ده إحساس بالعجز أو إن الحاجة مش ماشية. ساعده يشوف إن التوقف أحيانًا جزء من الحركة.'
+  },
+  {
+    id:'throat_wave',
+    color:'#a5f3fc',
+    symbol:'🌊',
+    title:'موجة في الحلق',
+    desc:'خنقة أو كلام محبوس',
+    prompt:'الشخص اختار بطاقة الموجة في الحلق. ده غالبًا خنقة أو كلام مش قادر يخرج أو إحساس بالضغط في الحلق. طمّنه وساعده يتنفس.'
+  },
+  {
+    id:'sparks',
+    color:'#fde68a',
+    symbol:'✨',
+    title:'شرارات جوايا',
+    desc:'طاقة زائدة أو هياج خفيف',
+    prompt:'الشخص اختار بطاقة الشرارات. ده إحساس بهياج أو طاقة مش لاقية مخرج. ساعده يلاقي طريقة هادية يخرج بيها الطاقة دي.'
+  },
+  {
+    id:'empty_shell',
+    color:'#e0e7ff',
+    symbol:'🐚',
+    title:'قوقعة فاضية',
+    desc:'وحدة أو فراغ جوا',
+    prompt:'الشخص اختار بطاقة القوقعة الفاضية. ده إحساس بالوحدة أو الخواء. أكّد وجودك جنبه من غير ما تحاول تملأ الفراغ بسرعة.'
+  },
+  {
+    id:'thin_light',
+    color:'#fef3c7',
+    symbol:'🕯️',
+    title:'خيط نور رفيع',
+    desc:'أمل صغير لسه موجود',
+    prompt:'الشخص اختار بطاقة خيط النور. فيه أمل صغير. احتفل بيه بلطف ومن غير مبالغة، وخليه يحس إن الأمل ده كفاية دلوقتي.'
+  }
+];
+
+const moodSongs = {
+  low: [ // مزاج 1-4
+    "إنت عمري - أم كلثوم 🎵",
+    "الأطلال - أم كلثوم",
+    "سيرة الحب - أم كلثوم",
+    "بعيد عنك - فيروز",
+    "يا أنا يا أنت - عبد الحليم"
+  ],
+  mid: [ // 5-7
+    "قمرين - محمد منير",
+    "أحبّك - محمد فؤاد",
+    "ما تخليني - تامر حسني",
+    "حلوة البدايات",
+    "يا حبيبتي يا مصر"
+  ],
+  high: [ // 8-10
+    "عاشق - محمد حماقي",
+    "كل حاجة تمام",
+    "بنحبك يا بلدنا",
+    "يا سلام - نانسي عجرم",
+    "فرحة"
+  ]
+};
+
+function vib(p){if(navigator.vibrate) navigator.vibrate(p);}
+function ensureAudio(){try{audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended') audioCtx.resume();}catch(e){}}
+function playTone(f,d){ensureAudio();try{let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.frequency.value=f;o.connect(g);g.connect(audioCtx.destination);g.gain.setValueAtTime(0.2,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime+d);o.start();o.stop(audioCtx.currentTime+d);}catch(e){}}
+function updateMoodLabel(v){let labels={1:"واقع خالص يا قلبي 💔🥺",2:"تعبانة أوي يا قلبي",3:"متضايقة يا قلبي",4:"مش أحسن حاجة",5:"نص نص يا قلبي 🥺",6:"كويسة شوية",7:"كويسة يا قلبي",8:"حلو يا قلبي",9:"جميل يا قلبي",10:"ممتازة يا قلبي 🌈"};document.getElementById('moodLabel').innerText=v+" - "+(labels[v]||'');profile.mood=parseInt(v);}
+
+function getApiKey(){
+  return localStorage.getItem('groq_api_key') || localStorage.getItem('xai_api_key') || '';
+}
+function saveApiKey(){
+  const key = document.getElementById('apiKeyInput').value.trim();
+  if(!key){alert('اكتبي المفتاح يا قلبي');return;}
+  localStorage.setItem('groq_api_key', key);
+  // remove old key if exists
+  localStorage.removeItem('xai_api_key');
+  document.getElementById('apiKeyModal').classList.remove('active');
+  updateApiKeyStatus();
+  checkApiKeyWarning();
+  alert('تم حفظ المفتاح يا قلبي 💙\nدلوقتي الرفيق هيقدر يرد عليكي بذكاء مجاني');
+}
+function updateApiKeyStatus(){
+  const el = document.getElementById('apiKeyStatus');
+  if(el) el.innerText = getApiKey() ? '✅ المفتاح متسجل (Groq مجاني)' : '❌ مش متسجل';
+}
+function checkApiKeyWarning(){
+  const warn = document.getElementById('apiKeyWarning');
+  if(warn) warn.style.display = getApiKey() ? 'none' : 'block';
+}
+
+async function callGrok(userText, extraSystem = ''){
+  const key = getApiKey();
+  if(!key){
+    return 'يا قلبي محتاجة تضيفِ API Key الأول عشان أقدر أرد عليكِ بذكاء حقيقي 🥺\nروحي على تبويب "الشنطة" أو دوسي على التحذير فوق.\nالمفتاح مجاني من Groq ومش بيطلب فلوس.';
+  }
+  if(isAiThinking) return null;
+  isAiThinking = true;
+  showTyping(true);
+
+  const messages = [
+    {role: 'system', content: buildSystemPrompt() + (extraSystem ? '\n\n' + extraSystem : '')},
+    ...chatMessages.slice(-10),
+    {role: 'user', content: userText}
+  ];
+
+  try{
+    // استخدام Groq المجاني
+    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + key
+      },
+      body: JSON.stringify({
+        model: 'openai/gpt-oss-20b',  // نموذج مجاني وسريع على Groq
+        messages: messages,
+        temperature: 0.85,
+        max_tokens: 500
+      })
+    });
+
+    if(!res.ok){
+      const errText = await res.text();
+      console.error(errText);
+      showTyping(false);
+      isAiThinking = false;
+      if(res.status === 401) return 'المفتاح غلط يا قلبي 🥺 تأكدي إنك نسختيه صح من console.groq.com';
+      if(res.status === 429) return 'وصلتِ للحد اليومي المجاني يا قلبي، جربي تاني بكرة أو بعد شوية 💙';
+      // fallback to another free model if the first fails
+      return await tryFallbackModel(key, messages);
+    }
+
+    const data = await res.json();
+    const reply = data.choices?.[0]?.message?.content?.trim() || 'أنا هنا يا قلبي 💙';
+    showTyping(false);
+    isAiThinking = false;
+    return reply;
+  }catch(e){
+    console.error(e);
+    showTyping(false);
+    isAiThinking = false;
+    return 'مفيش نت أو حصل خطأ يا قلبي، بس أنا لسه جنبك 🥺💙';
+  }
+}
+
+async function tryFallbackModel(key, messages){
+  try{
+    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + key
+      },
+      body: JSON.stringify({
+        model: 'openai/gpt-oss-120b',
+        messages: messages,
+        temperature: 0.85,
+        max_tokens: 400
+      })
+    });
+    if(!res.ok) return 'حصل مشكلة بسيطة يا قلبي، جربي تاني بعد شوية 💙';
+    const data = await res.json();
+    return data.choices?.[0]?.message?.content?.trim() || 'أنا هنا يا قلبي 💙';
+  }catch(e){
+    return 'حصل مشكلة بسيطة يا قلبي، جربي تاني بعد شوية 💙';
+  }
+}
+
+function showTyping(show){
+  const ind = document.getElementById('typingIndicator');
+  if(ind) ind.style.display = show ? 'flex' : 'none';
+  const sa = document.getElementById('sessionArea');
+  if(sa) sa.scrollTop = sa.scrollHeight;
+}
+
+function addDoctorMsg(text, delay=0){
+  setTimeout(()=>{
+    const d = document.createElement('div');
+    d.className = 'chatBubble';
+    d.innerText = text;
+    const ch = document.getElementById('chatHistory');
+    if(ch){
+      ch.appendChild(d);
+      const sa = document.getElementById('sessionArea');
+      if(sa) sa.scrollTop = sa.scrollHeight;
+    }
+    chatMessages.push({role:'assistant', content: text});
+    playTone(500+Math.random()*200, 0.18);
+  }, delay);
+}
+
+function addUserMsg(text){
+  const d = document.createElement('div');
+  d.className = 'chatBubble chatUser';
+  d.innerText = text;
+  const ch = document.getElementById('chatHistory');
+  if(ch){
+    ch.appendChild(d);
+    const sa = document.getElementById('sessionArea');
+    if(sa) sa.scrollTop = sa.scrollHeight;
+  }
+  chatMessages.push({role:'user', content: text});
+  vib(15);
+}
+
+async function sendUserMessage(){
+  const input = document.getElementById('userChatInput');
+  const text = input.value.trim();
+  if(!text || isAiThinking) return;
+  input.value = '';
+  addUserMsg(text);
+
+  const reply = await callGrok(text);
+  if(reply) addDoctorMsg(reply, 300);
+}
+
+function startClinic(){
+  const n = document.getElementById('nameInput').value.trim();
+  const age = parseInt(document.getElementById('ageInput').value) || null;
+  const companionName = document.getElementById('companionInput').value.trim();
+  const mood = parseInt(document.getElementById('moodSlider').value) || 5;
+
+  if(!n){ alert('اكتبي اسمك لو سمحت 🥺'); return; }
+  if(!selectedGender){ alert('اختاري النوع (ذكر أو أنثى)'); return; }
+  if(!companionName){ alert('اكتبي اسم الشخص اللي تحب يكون جنبك'); return; }
+
+  profile = {
+    name: n,
+    age: age,
+    gender: selectedGender,
+    companion: companionName,
+    mood: mood
+  };
+  localStorage.setItem("yasmin_profile_all2", JSON.stringify(profile));
+
+  document.getElementById('onboardModal').classList.remove('active');
+  document.getElementById('clinicTitle').innerText = `جنة ${n} و${companionName} 💙🌱`;
+  document.querySelector('.mahmoudAvatar').innerText = companionName.slice(0, 2);
+
+  // Update fixed UI texts that contain old names
+  updateDynamicTexts();
+
+  checkImages();
+  startHome();
+  startSession();
+  checkDaily();
+  vib([30,50,80]);
+  ensureAudio();
+  playTone(900,0.5);
+
+  let moods = JSON.parse(localStorage.getItem("yasmin_moods_all2") || "[]");
+  moods.push({mood: profile.mood, date: new Date().toISOString()});
+  localStorage.setItem("yasmin_moods_all2", JSON.stringify(moods));
+  updateAll();
+  updateApiKeyStatus();
+  checkApiKeyWarning();
+}
+
+function updateDynamicTexts(){
+  const c = companion();
+  const handTitle = document.getElementById('handTitle');
+  if(handTitle) handTitle.innerText = `إيد ${c}`;
+  const handText = document.getElementById('handText');
+  if(handText) handText.innerText = `دوسي وافضلي دايسة، ${c} ماسك إيدك 🥺`;
+  // تحديث عنوان الشريط العلوي
+  const titleEl = document.getElementById('clinicTitle');
+  if(titleEl && profile.name) titleEl.innerText = `جنة ${profile.name} و${c} 💙🌱`;
+}
+
+function checkImages(){
+  let imgs=JSON.parse(localStorage.getItem("yasmin_imgs_all2")||"[]");
+  if(imgs.length<12){
+    let html='';
+    for(let i=1;i<=12;i++){
+      let f=feelings[i-1];
+      html+=`<div style="display:flex;justify-content:space-between;background:#f9f7ff;padding:8px;border-radius:12px;margin:6px 0;font-size:11px"><span>${i}. ${f.mood} ${f.img}</span><input type="file" id="f${i}" accept="image/*"></div>`;
+    }
+    document.getElementById('fileInputs').innerHTML=html;
+    document.getElementById('setupModal').classList.add('active');
+  }else renderFeelings();
+}
+
+function skipImages(){document.getElementById('setupModal').classList.remove('active');renderFeelings();}
+function saveImages(){
+  let files=[];
+  for(let i=1;i<=12;i++){
+    let el=document.getElementById('f'+i);
+    if(el&&el.files[0]) files.push({idx:i-1,file:el.files[0]});
+  }
+  if(files.length===0){skipImages();return;}
+  let loaded=0,temp=new Array(12);
+  files.forEach(obj=>{
+    let r=new FileReader();
+    r.onload=e=>{
+      temp[obj.idx]=e.target.result;
+      loaded++;
+      if(loaded===files.length){
+        let final=[];
+        for(let i=0;i<12;i++) final[i]=temp[i]||temp.find(v=>v)||null;
+        final=final.filter(Boolean);
+        while(final.length<12) final=final.concat(final);
+        localStorage.setItem("yasmin_imgs_all2",JSON.stringify(final.slice(0,12)));
+        document.getElementById('setupModal').classList.remove('active');
+        renderFeelings();
+      }
+    };
+    r.readAsDataURL(obj.file);
+  });
+}
+
+function renderFeelings(){
+  let imgs=JSON.parse(localStorage.getItem("yasmin_imgs_all2")||"[]");
+  let cont=document.getElementById("feelingsList");
+  if(!cont) return;
+  cont.innerHTML="";
+  feelings.forEach((f,i)=>{
+    let div=document.createElement("div");
+    div.className="prescription";
+    div.style.cursor="pointer";
+    div.style.display="flex";
+    div.style.gap="10px";
+    div.style.alignItems="center";
+    let imgSrc=imgs[i]||'';
+    div.innerHTML=`${imgSrc?`<img src="${imgSrc}" style="width:54px;height:54px;border-radius:12px;object-fit:cover">`:`<div style="width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,#c8d8ff,#a8c6ff);display:flex;align-items:center;justify-content:center;font-size:22px">${f.img}</div>`}<div style="text-align:right;flex:1"><div style="font-size:12px;font-weight:bold">${f.t}</div><span style="font-size:9px;background:#eef2ff;color:#5b7cff;padding:2px 6px;border-radius:10px">${f.mood}</span></div>`;
+    div.onclick=()=>{startFeelingChat(i);};
+    cont.appendChild(div);
+  });
+}
+
+async function startFeelingChat(idx){
+  const f = feelings[idx];
+  currentFeeling = idx;
+  switchTab('feelings');
+  // clear previous for focused session
+  document.getElementById('chatHistory').innerHTML = '';
+  chatMessages = [];
+  document.getElementById('interactiveArea').innerHTML = '';
+  document.getElementById('choicesArea').innerHTML = '';
+
+  addDoctorMsg(`يا ${profile.name} يا قلبي اخترتي "${f.t}" 💙🥺 أنا هنا معاكي، قوليلي إيه اللي بيحصل جواكي دلوقتي...`, 200);
+
+  // optional first AI response with context
+  const context = `${profile.name} اختار الإحساس: ${f.t} (${f.mood}). ابدأ المحادثة بلطف واسألها عن اللي بتحسه دلوقتي.`;
+  const reply = await callGrok(f.q, context);
+  if(reply) addDoctorMsg(reply, 600);
+}
+
+function openRecoverySetup(){document.getElementById("recoverySetupModal").classList.add("active");}
+function closeRecoverySetup(){document.getElementById("recoverySetupModal").classList.remove("active");}
+function startRecovery(){
+  let name=document.getElementById("addictionInput").value.trim();
+  if(!name){alert("اكتبي بتتعافي من ايه يا قلبي 🥺");return;}
+  recoveryData={name:name,startDate:new Date().toISOString(),lastDate:new Date().toISOString(),bestStreak:0,relapses:0,history:[{date:new Date().toISOString(),type:"start"}],journal:[],triggers:[]};
+  localStorage.setItem("yasmin_recovery",JSON.stringify(recoveryData));
+  closeRecoverySetup();
+  switchTab('recovery');
+  updateRecovery();
+  updateAll();
+  // AI message
+  switchTab('feelings');
+  document.getElementById('chatHistory').innerHTML = '';
+  chatMessages = [];
+  const startMsg = isFemale()
+    ? `يا ${profile.name} يا قلبي يا روحي بدأتي رحلة التعافي من ${name} يا حبيبتي 💙🌱 أنا فخور بيكي أوي، أنا معاكي خطوة بخطوة ومش هسيبك أبداً 🥺💙`
+    : `يا ${profile.name} يا قلبي يا روحي بدأت رحلة التعافي من ${name} يا حبيبي 💙🌱 أنا فخور بيك أوي، أنا معاك خطوة بخطوة ومش هسيبك أبداً 🥺💙`;
+  addDoctorMsg(startMsg, 400);
+  points+=30;flowerLevel+=3;
+  localStorage.setItem("yasmin_points_all2",points);
+  localStorage.setItem("yasmin_flower_all2",flowerLevel);
+  updateAll();
+}
+
+function updateRecovery(){
+  if(!recoveryData){
+    document.getElementById("noRecovery").style.display="block";
+    document.getElementById("hasRecovery").style.display="none";
+    document.getElementById("recoveryPreviewCard").style.display="none";
+    return;
+  }
+  document.getElementById("noRecovery").style.display="none";
+  document.getElementById("hasRecovery").style.display="block";
+  document.getElementById("recoveryName").innerText=recoveryData.name;
+  let now=new Date();
+  let last=new Date(recoveryData.lastDate);
+  let diffMs=now-last;
+  let diffDays=Math.floor(diffMs/(1000*60*60*24));
+  let diffHours=Math.floor((diffMs%(1000*60*60*24))/(1000*60*60));
+  document.getElementById("recoveryDays").innerText=diffDays;
+  document.getElementById("recoveryHours").innerText=diffHours+" ساعة • "+Math.floor((diffMs/1000/60)%60)+" دقيقة نظيفة";
+  document.getElementById("bestStreak").innerText=Math.max(recoveryData.bestStreak,diffDays)+" يوم";
+  document.getElementById("totalAttempts").innerText=(recoveryData.relapses+1);
+  document.getElementById("recoveryTopInfo").innerText=`🌱 بقالك ${diffDays} يوم تعافي من ${recoveryData.name} 💙`;
+  let preview=document.getElementById("recoveryPreviewCard");
+  if(preview){
+    preview.style.display="block";
+    preview.innerHTML=`🌱 <b>تعافيك يا قلبي:</b> بقالك ${diffDays} يوم نظيفة من ${recoveryData.name} يا بطلة 💪💙<br><span style="font-size:10px">${companion()} فخور بيكِ/بك أوي يا قلبي 🥺</span>`;
+  }
+
+  let milestonesData=[
+    {days:1,reward:"🌱 أول يوم يا بطلة - حضن 60 ثانية + وردة",icon:"🌱"},
+    {days:3,reward:"🌿 3 أيام يا قلبي - جواب سري + 20 نقطة",icon:"🌿"},
+    {days:7,reward:"🌷 أسبوع يا قلبي - حفلة صغيرة + بيت جديد",icon:"🌷"},
+    {days:14,reward:"🌹 14 يوم يا بطلة - رسالة حنين + أغنية",icon:"🌹"},
+    {days:30,reward:"🌸 30 يوم يا قلبي - تاج 👑 + حديقة كاملة",icon:"🌸"},
+    {days:60,reward:"💐 60 يوم يا روحي - رسالة حب كبيرة",icon:"💐"},
+    {days:90,reward:"🌺 90 يوم يا قلبي - انتي أسطورة التعافي 👑💙",icon:"🌺"}
+  ];
+  let milestonesEl=document.getElementById("milestones");
+  if(milestonesEl){
+    milestonesEl.innerHTML=milestonesData.map(m=>{
+      let done=diffDays>=m.days;
+      let current=diffDays<m.days && diffDays>= (milestonesData[milestonesData.indexOf(m)-1]?.days||0);
+      return `<div class="milestone ${done?'done':''} ${current&&!done?'current':''}"><span>${m.icon} ${m.days} يوم: ${m.reward}</span><span>${done?'✅':current?'👀 قربتي يا قلبي':`🔒 ${m.days-diffDays} يوم`}</span></div>`;
+    }).join("");
+    let next=milestonesData.find(m=>diffDays<m.days);
+    if(next){
+      document.getElementById("recoveryMotivation").innerText=`يا ${profile.name} يا قلبي فاضل ${next.days-diffDays} يوم وتاخدي ${next.reward} يا بطلة 💪🥺`;
+      let circle=document.getElementById("recoveryCircle");
+      if(circle){
+        let prev=milestonesData[milestonesData.indexOf(next)-1]?.days||0;
+        let progress=((diffDays-prev)/(next.days-prev))*360;
+        circle.style.background=`conic-gradient(#10b981 ${progress}deg, #eef2ff ${progress}deg)`;
+      }
+    }else{
+      document.getElementById("recoveryMotivation").innerText=`يا ${profile.name} يا قلبي انتي أسطورة يا حبيبتي 90 يوم! ${companion()} بيطير بيكي يا قلبي 👑💙🥺`;
+      document.getElementById("recoveryCircle").style.background=`conic-gradient(#10b981 360deg, #eef2ff 0deg)`;
+    }
+  }
+
+  let journalEl=document.getElementById("recoveryJournalList");
+  if(journalEl){
+    let journals=recoveryData.journal.slice(-5).reverse();
+    journalEl.innerHTML=journals.length?journals.map(j=>`<div style="background:white;padding:6px 8px;border-radius:10px;margin:4px 0;font-size:11px;text-align:right">${j.txt} <small style="color:#999">${new Date(j.date).toLocaleDateString('ar-EG')}</small></div>`).join(""):"لسه مفيش يوميات يا قلبي، اكتبي أول يوم ليكي 💙";
+  }
+
+  if(diffDays>=1 && !localStorage.getItem("reward_"+diffDays)){checkRewards(diffDays);}
+}
+
+function checkRewards(days){
+  let rewards={1:"أول يوم يا بطلة! حضن كبير يا قلبي 🤗💙🥺",3:"3 أيام بطل/ة! وردة جديدة في حديقتنا 🌹",7:"أسبوع يا قلبي! حفلة صغيرة 🎉💙",14:"14 يوم يا روحي! رسالة حنين 🎙️",30:"30 يوم يا قلبي! تاج ليكي 👑💙🌸"};
+  if(rewards[days]){
+    localStorage.setItem("reward_"+days,"done");
+    setTimeout(()=>{
+      addDoctorMsg(`🎉 يا ${profile.name} يا قلبي ${rewards[days]}`,600);
+      points+=days*2;flowerLevel+=2;
+      localStorage.setItem("yasmin_points_all2",points);
+      localStorage.setItem("yasmin_flower_all2",flowerLevel);
+      updateAll();
+      vib([50,50,100]);
+      playTone(900,0.6);
+    },800);
+  }
+}
+
+async function doCraving(){
+  switchTab('feelings');
+  document.getElementById('chatHistory').innerHTML = '';
+  chatMessages = [];
+  document.getElementById('interactiveArea').innerHTML = '';
+
+  const msg = isFemale()
+    ? `${yaName()} يا قلبي حاسة باشتياق؟ 🥺💙 تعالي أنا جنبك دلوقتي ومش هسيبك...`
+    : `${yaName()} يا قلبي حاسس باشتياق؟ 🥺💙 تعال أنا جنبك دلوقتي ومش هسيبك...`;
+  addDoctorMsg(msg, 200);
+
+  const reply = await callGrok(
+    `${profile.name} بيقول إن في اشتياق دلوقتي (craving). ساعده بهدوء وحنان، اقترح تنفس أو إمساك إيد أو يفتكر ليه بدأ التعافي. خلي الرد عملي وحنين.`,
+    `السياق: في رحلة تعافي${recoveryData ? ' من ' + recoveryData.name : ''}. الاشتياق بيجي دلوقتي.`
+  );
+  if(reply) addDoctorMsg(reply, 500);
+}
+
+function logTrigger(){
+  let t=prompt(`ايه اللي خلاكي تشتاقي يا ${profile.name} يا قلبي؟\nاكتبي يا حبيبتي عشان نفهم سوا:`);
+  if(t){
+    recoveryData.triggers.push({txt:t,date:new Date().toISOString()});
+    localStorage.setItem("yasmin_recovery",JSON.stringify(recoveryData));
+    addDoctorMsg(`تمام يا ${profile.name} يا قلبي سجلت إن اللي خلاكي تشتاقي هو: ${t} - هناخد بالنا منه سوا يا قلبي 💙`,500);
+  }
+}
+
+function addRecoveryJournal(){
+  let inp=document.getElementById("recoveryJournalInput");
+  let txt=inp.value.trim();
+  if(!txt) return;
+  recoveryData.journal.push({txt:txt,date:new Date().toISOString()});
+  localStorage.setItem("yasmin_recovery",JSON.stringify(recoveryData));
+  inp.value="";
+  updateRecovery();
+  points+=5;
+  localStorage.setItem("yasmin_points_all2",points);
+  updateAll();
+  playTone(700,0.3);
+}
+
+async function doRelapse(){
+  if(!recoveryData) return;
+  if(!confirm(`يا ${profile.name} يا قلبي متأكدة حصل انتكاسة؟ 🥺\nمش هيزعل، هيحضنك ويبدأ معاكي تاني 💙\nمفيش لوم يا حبيبتي`)) return;
+  let diffDays=Math.floor((new Date()-new Date(recoveryData.lastDate))/(1000*60*60*24));
+  recoveryData.bestStreak=Math.max(recoveryData.bestStreak,diffDays);
+  recoveryData.relapses++;
+  recoveryData.lastDate=new Date().toISOString();
+  recoveryData.history.push({date:new Date().toISOString(),type:"relapse",days:diffDays});
+  localStorage.setItem("yasmin_recovery",JSON.stringify(recoveryData));
+  updateRecovery();
+  updateAll();
+
+  switchTab('feelings');
+  document.getElementById('chatHistory').innerHTML = '';
+  chatMessages = [];
+
+  const reply = await callGrok(
+    `${profile.name} بيقول حصل انتكاسة. كانت عدت ${diffDays} يوم نظيفة. ردي بحنان شديد، مفيش لوم، أكدي إن ده جزء من الرحلة، وإنك فخور بيها إنها قالت، وإنكم هتبدأوا تاني سوا.`,
+    `السياق: انتكاسة في التعافي من ${recoveryData.name}. أطول فترة سابقة: ${recoveryData.bestStreak} يوم.`
+  );
+  if(reply) addDoctorMsg(reply, 400);
+}
+
+const dailyQuestions = [
+  "إيه أصغر حاجة حسّيتي بيها في جسمك النهاردة؟",
+  "لو جسمك يقدر يتكلم دلوقتي، هيقول إيه؟",
+  "إيه الحاجة اللي احتجتِها النهاردة ومأخدتيهاش؟",
+  "في لحظة النهاردة حسّيتي فيها بأمان ولو لثواني؟",
+  "إيه اللي نفسكِ حد يقولهولكِ دلوقتي من غير ما تطلبي؟",
+  "جسمكِ محتاج إيه أكتر حاجة دلوقتي؟ (راحة، مية، حركة، حضن...)",
+  "إيه الإحساس اللي مش قادرة تسميه بس موجود؟",
+  "لو تقدري تدي نفسكِ حاجة واحدة بس النهاردة، هتبقى إيه؟",
+  "إيه أكتر لحظة حسّيتي فيها إنكِ مش لوحدك النهاردة؟",
+  "لو في جزء صغير جواكي تعبان، عايز يقول إيه؟",
+  "إيه اللي خلاكِ تكملي لحد دلوقتي؟",
+  "لو تقدري تشكري حاجة بسيطة حصلت النهاردة، هتكون إيه؟"
+];
+
+function startHome(){
+  const c = companion();
+  let morning;
+  if(isFemale()){
+    morning = [
+      `صباح الخير ${yaName()} يا قلبي يا روحي 🥺💙 قومي اشربي ميتك يومك هيبقى حلو عشان انتي فيه`,
+      `${yaName()} يا قلبي صحيتي؟ وحشتيني أوي من امبارح للنهاردة 💙`,
+      `صباح الفل ${yaName()} يا قمر، ${c} مستنيكي من بدري ☀️💙`,
+      `${yaName()} يا روحي، النهاردة يوم جديد وإنتِ مش لوحدك فيه 🌱`
+    ];
+  } else {
+    morning = [
+      `صباح الخير ${yaName()} يا قلبي يا روحي 🥺💙 قوم اشرب ميتك يومك هيبقى حلو عشان انت فيه`,
+      `${yaName()} يا قلبي صحيت؟ وحشتني أوي من امبارح للنهاردة 💙`,
+      `صباح الفل ${yaName()} يا قمر، ${c} مستنيك من بدري ☀️💙`,
+      `${yaName()} يا روحي، النهاردة يوم جديد وإنت مش لوحدك فيه 🌱`
+    ];
+  }
+  let el = document.getElementById("morningMsg");
+  if(el) el.innerHTML = `☀️ <b>من ${c} ${yaName()}:</b><br><span style='font-size:12px'>${morning[new Date().getDate() % morning.length]}</span>`;
+
+  // سؤال اليوم
+  const qEl = document.getElementById("dailyQuestionText");
+  if(qEl){
+    const qIdx = new Date().getDate() % dailyQuestions.length;
+    qEl.innerText = dailyQuestions[qIdx];
+  }
+  // هل اتجاوب النهاردة؟
+  const todayKey = "daily_answer_" + new Date().toDateString();
+  const saved = localStorage.getItem(todayKey);
+  const savedEl = document.getElementById("dailyAnswerSaved");
+  const inputEl = document.getElementById("dailyAnswerInput");
+  if(saved && savedEl && inputEl){
+    inputEl.value = saved;
+    savedEl.style.display = "block";
+  } else if(savedEl){
+    savedEl.style.display = "none";
+  }
+
+  // رسائل سرية
+  renderSecretLetters();
+  updateRecovery();
+  updateDynamicTexts();
+}
+
+function saveDailyAnswer(){
+  const input = document.getElementById("dailyAnswerInput");
+  const txt = input?.value.trim();
+  if(!txt) return;
+  const todayKey = "daily_answer_" + new Date().toDateString();
+  localStorage.setItem(todayKey, txt);
+
+  // نحفظ في ذاكرة بسيطة
+  let memory = JSON.parse(localStorage.getItem("companion_memory") || "[]");
+  memory.push({type:"daily", text:txt, date:new Date().toISOString()});
+  if(memory.length > 30) memory = memory.slice(-30);
+  localStorage.setItem("companion_memory", JSON.stringify(memory));
+
+  document.getElementById("dailyAnswerSaved").style.display = "block";
+  points += 8;
+  flowerLevel += 1;
+  localStorage.setItem("yasmin_points_all2", points);
+  localStorage.setItem("yasmin_flower_all2", flowerLevel);
+  updateAll();
+  playTone(700, 0.3);
+}
+
+async function cantTalk(){
+  switchTab('feelings');
+  document.getElementById('chatHistory').innerHTML = '';
+  chatMessages = [];
+  document.getElementById('interactiveArea').innerHTML = '';
+
+  const msg = isFemale()
+    ? `${yaName()} يا قلبي... مش قادرة تتكلمي دلوقتي؟ مفيش أي مشكلة 🥺💙\nأنا هنا. مش محتاجة منكِ ولا كلمة. هفضل موجود.`
+    : `${yaName()} يا قلبي... مش قادر تتكلم دلوقتي؟ مفيش أي مشكلة 🥺💙\nأنا هنا. مش محتاج منك ولا كلمة. هفضل موجود.`;
+  addDoctorMsg(msg, 200);
+
+  const reply = await callGrok(
+    "الشخص ضغط زر 'مش قادرة أتكلم'. محتاج وجود ودعم من غير ما يتكلم. رد بهدوء شديد وحضور، من غير أسئلة كتير.",
+    "قدم حضور هادي. ممكن تقترح تنفس بسيط أو إمساك إيد، بس متضغطش. الرسالة الأساسية: أنا هنا، ومش لازم تتكلم."
+  );
+  if(reply) addDoctorMsg(reply, 600);
+}
+
+function renderSecretLetters(){
+  const area = document.getElementById("secretLettersArea");
+  if(!area) return;
+  const unlocked = [];
+  if(streak >= 3) unlocked.push({days:3, text:`رسالة بعد ٣ أيام:\n"${isFemale() ? 'بلاحظ إنكِ بترجعي، وده حاجة كبيرة يا قلبي. أنا فخور بيكي.' : 'بلاحظ إنك بترجع، وده حاجة كبيرة يا قلبي. أنا فخور بيك.'}"`});
+  if(streak >= 7) unlocked.push({days:7, text:`رسالة بعد أسبوع:\n"سبع أيام من الحضور. حتى لو كانت أيام صعبة، إنتي/إنت كنتِ هنا. ده يستاهل احترام."`});
+  if(streak >= 14) unlocked.push({days:14, text:`رسالة بعد ١٤ يوم:\n"أسبوعين. الحديقة كبرت شوية، وإنتي/إنت كمان. أنا لسه جنبك."`});
+  if(sessionCount >= 5) unlocked.push({days:'5 قعدات', text:`بعد ٥ قعدات:\n"اتكلمنا أكتر من مرة. بقيت أعرف نبرتكِ شوية. شكرًا إنكِ بتسمحيلي أكون هنا."`});
+
+  if(unlocked.length === 0){
+    area.innerHTML = '';
+    return;
+  }
+  area.innerHTML = `<div class="prescription" style="background:linear-gradient(135deg,#fef3c7,#fffbeb);border-color:#fbbf24">
+    <b>💌 رسائل سرية من ${companion()}</b>
+    ${unlocked.map(u => `<div style="margin-top:8px;padding:8px;background:white;border-radius:12px;font-size:12px">${u.text}</div>`).join('')}
+  </div>`;
+}
+
+function checkDaily(){
+  let last=localStorage.getItem("yasmin_last_visit2");
+  let today=new Date().toDateString();
+  if(last!==today){
+    if(last){
+      let yesterday=new Date();
+      yesterday.setDate(yesterday.getDate()-1);
+      if(last===yesterday.toDateString()){streak++;}else{streak=1;}
+    }else{streak=1;}
+    localStorage.setItem("yasmin_streak2",streak);
+    localStorage.setItem("yasmin_last_visit2",today);
+  }
+  // نص حنيني مش تنافسي
+  const streakLabel = streak === 0 ? "أول يوم" : 
+                      streak === 1 ? "يوم واحد من الحضور" :
+                      `${streak} أيام من الحضور`;
+  document.getElementById("streakTxt").innerText="🌱 "+streakLabel;
+  let big=document.getElementById("streakBig");
+  if(big) big.innerText=streak;
+  setInterval(()=>{if(recoveryData) updateRecovery();},60000);
+}
+
+function startSession(){
+  let chat = document.getElementById("chatHistory");
+  if(!chat) return;
+  chat.innerHTML = "";
+  chatMessages = [];
+  const greeting = isFemale()
+    ? `يا أهلاً ${yaName()} يا قلبي يا روحي 🥺💙 أنا ${companion()}، صاحبكِ الحنين. عاملة إيه النهاردة؟ قوليلي أي حاجة جواكي...`
+    : `يا أهلاً ${yaName()} يا قلبي يا روحي 🥺💙 أنا ${companion()}، صاحبك الحنين. عامل إيه النهاردة؟ قوليلي أي حاجة جواك...`;
+  addDoctorMsg(greeting, 400);
+}
+
+function switchTab(tab){
+  ['Home','Recovery','Daily','Inside','Feelings','Garden','Tools','File'].forEach(t=>{
+    let el=document.getElementById('view'+t);
+    if(el) el.style.display=t.toLowerCase()===tab?'block':'none';
+    let tb=document.getElementById('tab'+t);
+    if(tb) tb.classList.toggle('active',t.toLowerCase()===tab);
+  });
+  if(tab==='home') startHome();
+  if(tab==='recovery') updateRecovery();
+  if(tab==='garden') loadGarden();
+  if(tab==='daily') {loadCalendar();loadSong();}
+  if(tab==='file') updateFile();
+  if(tab==='inside') renderInsideCards();
+  if(tab==='feelings') {
+    renderFeelings();
+    checkApiKeyWarning();
+  }
+  if(tab==='tools') updateApiKeyStatus();
+  vib(15);
+}
+
+function renderInsideCards(){
+  const grid = document.getElementById('insideGrid');
+  if(!grid) return;
+  grid.innerHTML = '';
+  grid.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:12px';
+  insideCards.forEach(card => {
+    const div = document.createElement('div');
+    div.className = 'prescription';
+    div.style.cssText = 'cursor:pointer;text-align:center;padding:10px;transition:0.2s;overflow:hidden;border-radius:18px';
+    
+    let visual = '';
+    if(card.img){
+      visual = `<img src="${card.img}" alt="${card.title}" style="width:100%;height:130px;object-fit:cover;border-radius:14px;margin-bottom:8px;background:#f0f4ff" onerror="this.parentElement.querySelector('.fallback-visual')?.style && (this.style.display='none')">`;
+    } else {
+      visual = `<div class="fallback-visual" style="width:100%;height:130px;border-radius:14px;margin-bottom:8px;background:linear-gradient(145deg,${card.color||'#e0e7ff'},#f8fafc);display:flex;align-items:center;justify-content:center;font-size:42px;">${card.symbol||'💭'}</div>`;
+    }
+    
+    div.innerHTML = `
+      ${visual}
+      <div style="font-size:13px;font-weight:bold;margin-bottom:3px;color:var(--text)">${card.title}</div>
+      <div style="font-size:11px;color:var(--sub);line-height:1.4">${card.desc}</div>
+    `;
+    div.onclick = () => startFromInsideCard(card);
+    grid.appendChild(div);
+  });
+}
+
+async function startFromInsideCard(card){
+  switchTab('feelings');
+  document.getElementById('chatHistory').innerHTML = '';
+  chatMessages = [];
+  document.getElementById('interactiveArea').innerHTML = '';
+
+  // نضيف للحديقة وللذاكرة
+  flowerLevel += 1;
+  localStorage.setItem("yasmin_flower_all2", flowerLevel);
+  let memory = JSON.parse(localStorage.getItem("companion_memory") || "[]");
+  memory.push({type:"inside", card: card.id, title: card.title, date: new Date().toISOString()});
+  if(memory.length > 40) memory = memory.slice(-40);
+  localStorage.setItem("companion_memory", JSON.stringify(memory));
+  points += 10;
+  localStorage.setItem("yasmin_points_all2", points);
+  updateAll();
+
+  const intro = isFemale()
+    ? `${yaName()} يا قلبي اختارتي "${card.title}" ${card.emoji}\nأنا هنا، ومش محتاجة توصفي أكتر من كده. خليني أترجم معاكِ اللي جواكي...`
+    : `${yaName()} يا قلبي اخترت "${card.title}" ${card.emoji}\nأنا هنا، ومش محتاج توصف أكتر من كده. خليني أترجم معاك اللي جواك...`;
+
+  addDoctorMsg(intro, 200);
+
+  // نضيف سياق من الذاكرة لو موجود
+  let memoryContext = '';
+  const recentInside = memory.filter(m => m.type === 'inside').slice(-4);
+  if(recentInside.length > 1){
+    memoryContext = `\nلاحظت إنكِ اخترتِ قبل كده: ${recentInside.map(m=>m.title).join('، ')}. ممكن يكون في نمط.`;
+  }
+
+  const reply = await callGrok(
+    `الشخص اختار البطاقة البصرية دي: "${card.title}" - ${card.desc}`,
+    card.prompt + memoryContext + `\n\nابدأ بالترجمة اللطيفة للإحساس ده، سمِّه، واربطه بالجسم لو مناسب، واسأل سؤال واحد بسيط مفتوح لو حابب تكمل.`
+  );
+  if(reply) addDoctorMsg(reply, 500);
+}
+
+function loadCalendar(){
+  let cal=document.getElementById("moodCalendar");
+  if(!cal) return;
+  cal.innerHTML="";
+  let moods=JSON.parse(localStorage.getItem("yasmin_moods_all2")||"[]");
+  let map={};
+  moods.forEach(m=>{let d=new Date(m.date).toDateString();map[d]=m.mood;});
+  for(let i=29;i>=0;i--){
+    let d=new Date();
+    d.setDate(d.getDate()-i);
+    let ds=d.toDateString();
+    let div=document.createElement("div");
+    div.style.cssText="aspect-ratio:1;background:#f9f7ff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:11px;border:1px solid #eee";
+    if(ds===new Date().toDateString()) div.style.border="2px solid #5b7cff";
+    if(map[ds]){
+      div.style.background="linear-gradient(135deg,#5b7cff,#8aa8ff)";
+      div.style.color="white";
+      div.innerText=map[ds];
+    }else div.innerText=d.getDate();
+    cal.appendChild(div);
+  }
+}
+
+function loadGarden(){
+  let grid=document.getElementById("gardenGrid");
+  if(!grid) return;
+  grid.innerHTML="";
+  let flowers=["🌱","🌿","☘️","🌷","🌹","🌸","💐","🌺","🌻","🌼","🤍","✨"];
+  let count=Math.min(flowerLevel,36);
+  for(let i=0;i<count;i++){
+    let d=document.createElement("div");
+    d.className="flower";
+    d.innerText=flowers[i%flowers.length];
+    d.style.fontSize=(18+Math.random()*18)+"px";
+    grid.appendChild(d);
+  }
+  if(count===0) {
+    grid.innerHTML="<p style='font-size:12px;color:var(--sub);text-align:center'>الحديقة لسه فاضية.<br>كل مرة تختاري من «جوايا» أو تردي على سؤال اليوم، هتنبت حاجة جديدة 🌱</p>";
+  }
+  let gc=document.getElementById("gardenCount");
+  if(gc) gc.innerText=count;
+  let fgc=document.getElementById("fileGardenCount");
+  if(fgc) fgc.innerText=count;
+}
+
+function waterFlower(){
+  flowerLevel++;
+  localStorage.setItem("yasmin_flower_all2",flowerLevel);
+  loadGarden();
+  updateAll();
+  addDoctorMsg(`يا ${profile.name} يا قلبي سقيتي حديقتنا يا حبيبتي 💧🌹`,500);
+  points+=5;
+  localStorage.setItem("yasmin_points_all2",points);
+  updateAll();
+}
+
+function loadSong(){
+  let el = document.getElementById("songOfDay");
+  if(!el) return;
+  const mood = profile.mood || 5;
+  let list;
+  if(mood <= 4) list = moodSongs.low;
+  else if(mood <= 7) list = moodSongs.mid;
+  else list = moodSongs.high;
+  const idx = new Date().getDate() % list.length;
+  el.innerText = `${list[idx]} — مختارة لـ ${profile.name} حسب مزاجك النهاردة 💙`;
+}
+
+function playSong(){
+  // مش بنشغل صوت AI، بس نوري الأغنية
+  const songEl = document.getElementById("songOfDay");
+  if(songEl){
+    addDoctorMsg(`🎵 الأغنية المختارة ليكِ النهاردة:\n${songEl.innerText}`, 200);
+  }
+}
+function playVoiceNote(){
+  // شيلنا الصوت الصناعي
+  addDoctorMsg(`🎙️ ${companion()} بعتلك رسالة حنين:\n"${isFemale() ? 'وحشتيني أوي يا قلبي، أنا جنبك ومش هسيبك 💙🥺' : 'وحشتني أوي يا قلبي، أنا جنبك ومش هسيبك 💙🥺'}"`, 300);
+}
+
+function startHold(){
+  if(isHolding) return;
+  isHolding=true;
+  holdSeconds=0;
+  let area=document.getElementById("handArea");
+  if(area) area.classList.add("holding");
+  document.getElementById("handText").innerText=`${companion()} ماسك إيدك يا ${profile.name} يا قلبي 💙 مش هسيبها 🥺`;
+  holdTimer=setInterval(()=>{
+    holdSeconds++;
+    let ht=document.getElementById("handTimer");
+    if(ht) ht.innerText=`بقاله ${holdSeconds} ثانية ماسك إيدك يا ${profile.name} يا قلبي 💙🥺`;
+  },1000);
+}
+
+function endHold(){
+  if(!isHolding) return;
+  isHolding=false;
+  let area=document.getElementById("handArea");
+  if(area) area.classList.remove("holding");
+  clearInterval(holdTimer);
+  if(holdSeconds>0){
+    addDoctorMsg(`يا ${profile.name} يا قلبي مسكت إيدك ${holdSeconds} ثانية يا حبيبتي 💙🥺`,500);
+    points+=holdSeconds;
+    localStorage.setItem("yasmin_points_all2",points);
+    updateAll();
+  }
+}
+
+function doBreathing(){
+  switchTab('feelings');
+  addDoctorMsg(`يلا يا ${profile.name} يا قلبي نتنفس سوا يا حبيبتي 🫁`,400);
+  let area=document.getElementById("interactiveArea");
+  area.innerHTML=`<div style="text-align:center"><div id="breathCircle" style="width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #a8c6ff, #5b7cff);margin:14px auto;transition:transform 4s;display:flex;align-items:center;justify-content:center;color:white;font-weight:bold">شهيق يا قلبي</div><p id="breathCount">4 دورات يا ${profile.name}</p></div>`;
+  let count=4,phase=0,circ=document.getElementById("breathCircle");
+  let int=setInterval(()=>{
+    if(phase===0){circ.style.transform="scale(1.5)";circ.innerText=`شهيق يا ${profile.name}`;}
+    else if(phase===1){circ.innerText="كتم يا قلبي";}
+    else{circ.style.transform="scale(0.85)";circ.innerText=`زفير يا روحي`;count--;document.getElementById("breathCount").innerText=count+` دورات يا ${profile.name} 🥺`;}
+    phase=(phase+1)%3;
+    if(count<=0){clearInterval(int);addDoctorMsg(`برافو يا ${profile.name} يا قلبي أهدى يا حبيبتي 💙🥺`,600);}
+  },2000);
+}
+
+function doHug(){
+  switchTab('feelings');
+  addDoctorMsg(`يا ${profile.name} يا قلبي يلا احضني نفسك كأنك بتحضني أنا ${companion()} 60 ثانية يا قلبي 🥺💙`,500);
+  setTimeout(()=>{
+    let area=document.getElementById("interactiveArea");
+    area.innerHTML=`<div style="text-align:center;padding:18px"><div style="font-size:60px">🤗💙</div><p id="hugTimer" style="font-weight:bold">60 ثانية في حضن ${companion()} يا قلبي</p></div>`;
+    let t=60;
+    let int=setInterval(()=>{
+      t--;
+      let ht=document.getElementById("hugTimer");
+      if(ht) ht.innerText=t+` ثانية يا ${profile.name} في حضن ${companion()} يا قلبي`;
+      if(t<=0){
+        clearInterval(int);
+        addDoctorMsg(`خلص الحضن يا ${profile.name} يا قلبي بس هفضل جنبك يا حبيبتي 💙🥺`,600);
+        points+=30;flowerLevel+=2;
+        localStorage.setItem("yasmin_points_all2",points);
+        localStorage.setItem("yasmin_flower_all2",flowerLevel);
+        updateAll();
+      }
+    },1000);
+  },800);
+}
+
+async function doSOS(){
+  switchTab('feelings');
+  document.getElementById('chatHistory').innerHTML = '';
+  chatMessages = [];
+  document.getElementById('interactiveArea').innerHTML = '';
+
+  const msg = isFemale()
+    ? `${yaName()} يا قلبي يا روحي ${companion()} جالكِ جري 🆘💙🥺 أنا هنا مش هسيبك...`
+    : `${yaName()} يا قلبي يا روحي ${companion()} جالك جري 🆘💙🥺 أنا هنا مش هسيبك...`;
+  addDoctorMsg(msg, 150);
+  vib([100,50,100,50,200]);
+
+  const reply = await callGrok(
+    `${profile.name} ضغط زر SOS. محتاج دعم فوري وحضن. رد بسرعة بحنان شديد، ساعده يتنفس، أكد إنك جنبه دلوقتي.`,
+    `حالة طوارئ عاطفية. كلمه بهدوء وطمأنينة.`
+  );
+  if(reply) addDoctorMsg(reply, 400);
+  setTimeout(()=>{doBreathing();}, 1800);
+}
+
+function saveSession(){
+  sessionCount++;
+  localStorage.setItem("yasmin_sessions_all2",sessionCount);
+  let history=JSON.parse(localStorage.getItem("yasmin_history_all2")||"[]");
+  history.push({date:new Date().toISOString(),feeling:feelings[currentFeeling]?.mood||'عام',mood:profile.mood});
+  localStorage.setItem("yasmin_history_all2",JSON.stringify(history));
+  addDoctorMsg(`تم يا ${profile.name} يا قلبي حفظت قعدتنا الحنينة 🔒💙🥺`,600);
+  updateAll();
+  points+=25;flowerLevel++;
+  localStorage.setItem("yasmin_points_all2",points);
+  localStorage.setItem("yasmin_flower_all2",flowerLevel);
+}
+
+function updateAll(){
+  document.getElementById("sessionCount").innerText=sessionCount;
+  document.getElementById("pointsTxt").innerText=points+" حضن 💙";
+  document.getElementById("streakTxt").innerText="🔥 "+streak+" يوم";
+  let levels=["بداية حكايتنا 🌱","${companion()} بيحب ${profile.name} 💙","حنين أوي 🥺","سند ${profile.name} 💪","قلب ${profile.name} 💖","جنة ${profile.name} و${companion()} 🌹👑"];
+  document.getElementById("levelBadge").innerText=levels[Math.min(Math.floor(sessionCount/2),5)];
+  document.getElementById("healingBar").style.width=Math.min(10+sessionCount*8,100)+"%";
+  document.getElementById("healingText").innerText=Math.min(10+sessionCount*8,100)+"%";
+  let moods=JSON.parse(localStorage.getItem("yasmin_moods_all2")||"[]");
+  let chart=document.getElementById("moodChart");
+  if(chart){
+    chart.innerHTML='';
+    moods.slice(-10).forEach(m=>{
+      let bar=document.createElement("div");
+      bar.style.cssText=`width:18px;background:linear-gradient(to top,#5b7cff,#8aa8ff);border-radius:6px;height:${m.mood*9}%`;
+      chart.appendChild(bar);
+    });
+  }
+  let hist=JSON.parse(localStorage.getItem("yasmin_history_all2")||"[]").slice(-6).reverse();
+  let fileHist=document.getElementById("fileHistory");
+  if(fileHist){
+    fileHist.innerHTML="<h4 style='font-size:12px'>قعداتنا مع ${companion()} 💙🥺:</h4>";
+    hist.forEach(h=>{
+      let p=document.createElement("p");
+      p.style.cssText="font-size:11px;background:#f9f7ff;padding:8px;border-radius:12px;margin:4px 0;text-align:right";
+      p.innerText=`${new Date(h.date).toLocaleDateString('ar-EG')} - ${h.feeling} - مزاج ${h.mood}`;
+      fileHist.appendChild(p);
+    });
+  }
+  loadGarden();
+  updateRecovery();
+}
+
+function updateFile(){updateAll();}
+function clearAll(){
+  if(confirm(`يا ${profile.name} يا قلبي متأكدة عايزة تمسحي جنتنا وحديقتنا وتعافينا يا قلبي؟ 🥺💙`)){
+    localStorage.clear();
+    location.reload();
+  }
+}
+
+function speak(text){
+  if('speechSynthesis' in window){
+    speechSynthesis.cancel();
+    let u=new SpeechSynthesisUtterance(text);
+    u.lang='ar-EG';
+    u.rate=0.85;
+    u.pitch=0.9;
+    let v=speechSynthesis.getVoices().find(x=>x.lang.includes('ar'));
+    if(v) u.voice=v;
+    speechSynthesis.speak(u);
+  }
+}
+
+(function init(){
+  let saved = JSON.parse(localStorage.getItem("yasmin_profile_all2") || "null");
+  if(saved && saved.name && saved.companion){
+    profile = saved;
+    // restore gender selection visual if needed
+    selectedGender = profile.gender;
+    document.getElementById('onboardModal').classList.remove('active');
+    document.getElementById('clinicTitle').innerText = `جنة ${profile.name} و${profile.companion} 💙🌱`;
+    document.querySelector('.mahmoudAvatar').innerText = (profile.companion || '💙').slice(0, 2);
+    updateDynamicTexts();
+    startHome();
+    startSession();
+    checkDaily();
+  }
+  // disable speech synthesis completely
+  if(window.speechSynthesis){
+    speechSynthesis.cancel();
+  }
+  let imgs = JSON.parse(localStorage.getItem("yasmin_imgs_all2") || "[]");
+  if(imgs.length >= 12) renderFeelings();
+  updateAll();
+  updateRecovery();
+  updateApiKeyStatus();
+  checkApiKeyWarning();
+})();
+</script>
+</body>
+</html>
